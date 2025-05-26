@@ -65,13 +65,13 @@ services:
       db:
         condition: service_healthy
     environment:
-      WWW_USER_ID: ${WWW_USER_ID:-1000}
-      WWW_GROUP_ID: ${WWW_GROUP_ID:-1000}
+      WWW_USER_ID: $WWW_USER_ID
+      WWW_GROUP_ID: $WWW_GROUP_ID
       DOLI_DB_HOST: db
       DOLI_DB_NAME: $DOLI_DB_NAME
       DOLI_DB_USER: $DOLI_DB_USER
       DOLI_DB_PASSWORD: $DOLI_DB_PASSWORD
-      DOLI_URL_ROOT: "${DOLI_URL_ROOT:-http://0.0.0.0}"
+      DOLI_URL_ROOT: $DOLI_URL_ROOT
       DOLI_ADMIN_LOGIN: $DOLI_ADMIN_LOGIN
       DOLI_ADMIN_PASSWORD: $DOLI_ADMIN_PASSWORD
       DOLI_INIT_DEMO: ${DOLI_INIT_DEMO:-0}
